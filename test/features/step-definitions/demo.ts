@@ -26,25 +26,31 @@ Then(/^URL should match (.*)$/, async function (ExpectedURL) {
 });
 
 Given(/^A web page is opened$/, async function () {
-  await browser.url("/inputs");
+  await browser.url("/dropdown");
   await browser.setTimeout({ implicit: 15000, pageLoad: 10000 });
   await browser.maximizeWindow();
 });
 
 When(/^Perform web interaction$/, async function () {
-  let inputBox=await $(`input[type=number]`);
+  //let inputBox=await $(`input[type=number]`);
   //await inputBox.setValue("12345");
   //await browser.debug();
-  
-  let num=123456
-  let strNum=num.toString()
-  inputBox.click();
-  for(let i=0; i<strNum.length; i++){
-    await browser.pause(1000);
-    await browser.keys(strNum.charAt(i));
-    
+  //let num=123456
+  //let strNum=num.toString()
+  //inputBox.click();
+  //for(let i=0; i<strNum.length; i++){
+    //await browser.pause(1000);
+   // await browser.keys(strNum.charAt(i));   
+  //}
+  //let dropDownBoxEdit=await $(`//select/option[@selected="selected"]`);
+ // let actualValue=await dropDownBox.getText();
+  //chai.expect(actualValue).to.equal("Please select an option1");
 
-  }
 
+  //let dropDownBox=await $(`#dropdown`)
+  //dropDownBox.selectByAttribute("value","1");
+
+  //let dropDownElements=$$(`select > option`);
+  //await browser.debug();
 
 });
