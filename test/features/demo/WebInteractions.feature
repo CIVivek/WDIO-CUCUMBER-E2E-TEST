@@ -1,6 +1,6 @@
-Feature: Demo feature
+Feature: WenInteractions feature
 
-    @demo
+   @smoke
     Scenario Outline: Run first demo feature
         Given A web page is opened
         When Perform web interaction
